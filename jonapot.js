@@ -5,7 +5,7 @@ let gepKep = document.getElementById("gepKep");
 let valasztas;
 let gepValaszt;
 
-let valasztasok = ["/kopapirollo/kov.jpg","/kopapirollo/papir.jpg.jpg","/kopapirollo/ollo.jpg"]
+let valasztasok = ["./kov.jpg","./papir.jpg.jpg","./ollo.jpg"]
 
 
 function KoKiValaszt(id) {
