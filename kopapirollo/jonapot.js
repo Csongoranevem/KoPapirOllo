@@ -43,7 +43,7 @@ function Terminator() {
     let gepDiv = document.getElementById("gepValasztasa")
     let gepKep = document.getElementById("gepKep");
     const szam = RandomSzam(0,2)
-    gepValaszt = valasztasok[szam];
+    gepValaszt = szam;
     gepKep.src = valasztasok[szam];
 
     Eredmeny();
@@ -55,6 +55,7 @@ let sajat = document.getElementById("sajatPont");
 let sajatP = 0;
 let gep = document.getElementById("gepPont");
 let gepP = 0;
+let nyert = document.getElementById("nyertel")
 
 
 
@@ -63,17 +64,20 @@ function RandomSzam(min, max) {
 }
 
 function Eredmeny() {
+    console.log(gepValaszt, valasztas)
     if(gepValaszt == valasztas){
-        alert("dontetlen")
+        nyert.textContent = "Döntetlen"
     }
     else if((gepValaszt == 2 && valasztas == 0) || (gepValaszt == 1 && valasztas == 2) || gepValaszt == 0 && valasztas == 1){
         sajatP+=1;
-        sajat.textContent = sajatP;
+        sajat.textContent = "Pontjaid: " + sajatP;
+        nyert.textContent = "Nyertél"
     }
 
     else{
         gepP+=1;
-        gep.textContent = gepP;
+        gep.textContent = "Gép pontjai: " + gepP;
+        nyert.textContent = "Vesztettél"
     }
 
 
